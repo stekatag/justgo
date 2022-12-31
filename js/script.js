@@ -99,9 +99,7 @@ class Slider {
     this._goToSlide();
     this._nextSlide();
     this._prevSlide();
-    this._keyPress();
   }
-
 
   // This function loops through all the slides and sets their transform property to translateX(100 * (i - slide))%.
   //@param [slide=0] - The slide to go to.
@@ -129,19 +127,53 @@ class Slider {
       this._goToSlide(this.currentSlide);
     });
   }
-
-  // If the key pressed is the left arrow, then call the previous slide function, otherwise if the key
-  // pressed is the right arrow, then call the next slide function.
-  _keyPress() {
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") this._prevSlide();
-      e.key === "ArrowRight" && this._nextSlide();
-    });
-  }
 }
 
 const sliderHero = new Slider(".hero-slide", ".hero-slider__btn--left", ".hero-slider__btn--right");
 const sliderTestimonials = new Slider(".testimonials-slide", ".testimonial__btn--left", ".testimonial__btn--right", 105);
+
+///////////////////////////////////////
+// Locations slider
+const swiper = new Swiper('.locations-content', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 25,
+  loop: true,
+  fade: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    570: {
+      slidesPerView: 2,
+    },
+    780: {
+      slidesPerView: 3,
+    },
+    1250: {
+      slidesPerView: 4,
+    },
+  }
+});
+
 
 // const slider = function () {
 //   const slides = document.querySelectorAll(".slide");
@@ -191,46 +223,3 @@ const sliderTestimonials = new Slider(".testimonials-slide", ".testimonial__btn-
 //   });
 // }
 // slider();
-
-///////////////////////////////////////
-// Locations slider
-const swiper = new Swiper('.locations-content', {
-  // Optional parameters
-  direction: 'horizontal',
-  slidesPerView: 4,
-  spaceBetween: 25,
-  loop: true,
-  fade: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    570: {
-      slidesPerView: 2,
-    },
-    780: {
-      slidesPerView: 3,
-    },
-    1250: {
-      slidesPerView: 4,
-    },
-  }
-});
-
