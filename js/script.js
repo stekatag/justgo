@@ -222,10 +222,10 @@ const swiper = new Swiper('.locations-content', {
     0: {
       slidesPerView: 1,
     },
-    720: {
+    570: {
       slidesPerView: 2,
     },
-    990: {
+    780: {
       slidesPerView: 3,
     },
     1250: {
