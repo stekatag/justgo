@@ -20,6 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <title>justGO - Travel Agency</title>
 
     <script defer src="js/script.js"></script>
@@ -45,6 +46,10 @@
           <li><a class="main-nav-link nav-cta" href="#cta">Book Now</a></li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close"></ion-icon>
+      </button>
     </header>
     <!-- ================= MAIN ================= -->
     <main>
@@ -59,7 +64,7 @@
               Plovdiv, such as the Ancient Theatre, the Ethnographic Museum, and
               the Roman Stadium.
             </p>
-            <div>
+            <div class="hero-btns">
               <a class="btn btn--outline margin-right-sm" href="#activities"
                 >Browse Activity</a
               >
@@ -75,7 +80,7 @@
               landmarks and attractions such as the Colosseum, Pantheon, Trevi
               Fountain, and Spanish Steps.
             </p>
-            <div>
+            <div class="hero-btns">
               <a class="btn btn--outline margin-right-sm" href="#activities"
                 >Browse Activity</a
               >
@@ -91,7 +96,7 @@
               perspective of the city. The cruise includes live commentary,
               providing information about the sights and history of Amsterdam.
             </p>
-            <div>
+            <div class="hero-btns">
               <a class="btn btn--outline margin-right-sm" href="#activities"
                 >Browse Activity</a
               >
@@ -108,46 +113,52 @@
         </div>
 
         <!-- ================= SEARCH FORM ================= -->
-        <form action="" class="search-form">
-          <div class="search-form__elements">
-            <input
-              type="search"
-              name="location"
-              placeholder="Where are you going?"
-              required
-            />
-            <select name="activities" id="select-activity" required>
-              <option value="">Activity Type:</option>
-              <option value="sightseeing">Sightseeing</option>
-              <option value="adventure">Adventure</option>
-              <option value="cultural">Cultural</option>
-              <option value="food">Food</option>
-              <option value="day trip">Day Trip</option>
-              <option value="nightlife">Nightlife</option>
-              <option value="private tour">Private Tour</option>
-            </select>
+        <div class="search-form-container">
+          <form action="#" class="search-form">
+            <div class="search-form__elements">
+              <input
+                type="search"
+                name="location"
+                placeholder="Where are you going?"
+                required
+              />
+              <select name="activities" id="select-activity" required>
+                <option value="">Activity Type:</option>
+                <option value="sightseeing">Sightseeing</option>
+                <option value="adventure">Adventure</option>
+                <option value="cultural">Cultural</option>
+                <option value="food">Food</option>
+                <option value="day trip">Day Trip</option>
+                <option value="nightlife">Nightlife</option>
+                <option value="private tour">Private Tour</option>
+              </select>
 
-            <select name="select-destination" id="select-destination" required>
-              <option value="">Destination:</option>
-              <option value="plovdiv">Plovdiv</option>
-              <option value="london">London</option>
-              <option value="paris">Paris</option>
-              <option value="new york">New York</option>
-              <option value="dubai">Dubai</option>
-              <option value="istanbul">Istanbul</option>
-              <option value="rome">Rome</option>
-            </select>
+              <select
+                name="select-destination"
+                id="select-destination"
+                required
+              >
+                <option value="">Destination:</option>
+                <option value="plovdiv">Plovdiv</option>
+                <option value="london">London</option>
+                <option value="paris">Paris</option>
+                <option value="new york">New York</option>
+                <option value="dubai">Dubai</option>
+                <option value="istanbul">Istanbul</option>
+                <option value="rome">Rome</option>
+              </select>
 
-            <select name="select-duration" id="select-duration" required>
-              <option value="">Duration:</option>
-              <option value="short">0-3 hours</option>
-              <option value="medium">3-5 hours</option>
-              <option value="long">5-7 hours</option>
-              <option value="full day">Full day</option>
-            </select>
-          </div>
-          <button class="btn btn--full" type="submit">Search</button>
-        </form>
+              <select name="select-duration" id="select-duration" required>
+                <option value="">Duration:</option>
+                <option value="short">0-3 hours</option>
+                <option value="medium">3-5 hours</option>
+                <option value="long">5-7 hours</option>
+                <option value="full day">Full day</option>
+              </select>
+            </div>
+            <button class="btn btn--full" type="submit">Search</button>
+          </form>
+        </div>
       </section>
 
       <!-- ================= ACTIVITIES ================= -->
@@ -982,12 +993,12 @@
           <ul class="footer-links">
             <li><a class="footer-link" href="#">Home</a></li>
             <li><a class="footer-link" href="#">About us</a></li>
-            <li><a class="footer-link" href="#">Destinations</a></li>
+            <li><a class="footer-link" href="#locations">Destinations</a></li>
             <li><a class="footer-link" href="#">Partners</a></li>
             <li><a class="footer-link" href="#">Tours</a></li>
-            <li><a class="footer-link" href="#">Contact</a></li>
+            <li><a class="footer-link" href="#cta">Contact</a></li>
             <li><a class="footer-link" href="#">Careers</a></li>
-            <li><a class="footer-link" href="#">Blog</a></li>
+            <li><a class="footer-link" href="#blogs">Blog</a></li>
           </ul>
 
           <h4 class="footer-heading">Popular Search</h4>
