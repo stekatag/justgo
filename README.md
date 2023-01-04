@@ -38,7 +38,7 @@ JustGO Travel Agency has been providing clients with the best travel guides, tra
 
 ## ✅ HTML and CSS validation
 
-- Official HTML validator: [click here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fstekatag.github.io%2Fjustgo%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- Official HTML validator: [click here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fstekatag.github.io%2Fjustgo%2F)
 - Official CSS validator: [click here](https://jigsaw.w3.org/css-validator/validator?uri=stekatag.github.io%2Fjustgo%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ## 📚 Resources
