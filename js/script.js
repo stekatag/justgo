@@ -44,6 +44,23 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
+///////////////////////////////////////////////////////////
+// Preventing the default behavior of the form
+const formEl = document.querySelectorAll(".form");
+
+formEl.forEach(function (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    form.reset();
+  });
+})
+
 ///////////////////////////////////////
 // Button scrolling
 const allLinks = document.querySelectorAll("a:link");

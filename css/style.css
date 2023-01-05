@@ -427,9 +427,18 @@
   align-items: baseline;
 }
 
-.location-heading {
+.location-heading:link,
+.location-heading:visited {
   font-size: 2.2rem;
   font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.location-heading:hover,
+.location-heading:active {
+  color: var(--primary);
 }
 
 .location-price {
